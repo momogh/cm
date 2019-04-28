@@ -5,5 +5,10 @@ Window {
     visible: true
     width: 1090
     height: 768
-    title: qsTr("Hello World")
+    title: qsTr("Client Management")
+
+    Text {
+        text: masterController.ui_welcomeMessage
+    }
+
 }
