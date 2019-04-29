@@ -43,6 +43,11 @@ unix {
 
 !build_pass:message(cm-lib project dir: $${PWD})
 
-DESTDIR = $$PWD/../binaries/windows/gcc/x86/debug
+DESTDIR = $$PWD/../binaries/$$DESTINATION_PATH
+OBJECTS_DIR = $$PWD/build/$$DESTINATION_PATH/.obj
+MOC_DIR = $$PWD/build/$$DESTINATION_PATH/.moc
+RCC_DIR = $$PWD/build/$$DESTINATION_PATH/.qrc
+UI_DIR = $$PWD/build/$$DESTINATION_PATH/.ui
+
 !build_pass:message(cm-lib output dir: $${DESTDIR})
 

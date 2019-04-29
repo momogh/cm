@@ -11,7 +11,8 @@ INCLUDEPATH +=  source \
 include(../qmake-target-platform.pri)
 include(../qmake-destination-path.pri)
 
-LIBS += -L$$PWD/../../shadow-build/cm-lib/debug -lcm-lib
+#LIBS += -L$$PWD/../../shadow-build/cm-lib/debug -lcm-lib
+LIBS += -L$$PWD/../binaries/$$DESTINATION_PATH -lcm-lib
 
 SOURCES += source/main.cpp
 
@@ -39,3 +40,9 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DESTDIR = $$PWD/../binaries/$$DESTINATION_PATH
+OBJECTS_DIR = $$PWD/build/$$DESTINATION_PATH/.obj
+MOC_DIR = $$PWD/build/$$DESTINATION_PATH/.moc
+RCC_DIR = $$PWD/build/$$DESTINATION_PATH/.qrc
+UI_DIR = $$PWD/build/$$DESTINATION_PATH/.ui
