@@ -1,3 +1,9 @@
+#What is a PRI file?
+#
+#Software development settings file used by applications created for Qt, a cross-platform framework commonly used for
+#building and running mobile applications; contains settings for the qmake command, which builds the application;
+#used for specifying locations of developer files and platform-specific definitions.
+
 win32 {
 	CONFIG += PLATFORM_WIN
         !build_pass:message(PLATFORM_WIN)
