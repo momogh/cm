@@ -21,6 +21,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 INCLUDEPATH += source
 
+include(../qmake-target-platform.pri)
+include(../qmake-destination-path.pri)
+
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -37,3 +40,9 @@ unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+!build_pass:message(cm-lib project dir: $${PWD})
+
+DESTDIR = $$PWD/../binaries/windows/gcc/x86/debug
+!build_pass:message(cm-lib output dir: $${DESTDIR})
+

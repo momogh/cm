@@ -5,7 +5,13 @@ TEMPLATE = app
 CONFIG += c++14
 
 
-INCLUDEPATH += source
+INCLUDEPATH +=  source \
+                ../cm-lib/source  #Questa riga ci permette di "vedere" (e quindi di usare) le classi dentro il progetto cm-lib.
+
+include(../qmake-target-platform.pri)
+include(../qmake-destination-path.pri)
+
+LIBS += -L$$PWD/../../shadow-build/cm-lib/debug -lcm-lib
 
 SOURCES += source/main.cpp
 

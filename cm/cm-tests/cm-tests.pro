@@ -28,4 +28,7 @@ CONFIG -= app_bundle
 
 INCLUDEPATH += source
 
+include(../qmake-target-platform.pri)
+include(../qmake-destination-path.pri)
+
 SOURCES += source/models/tst_clienttests.cpp
