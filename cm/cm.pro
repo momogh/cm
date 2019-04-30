@@ -6,5 +6,5 @@ SUBDIRS += \
     cm-tests
 
 
-!build_pass:message(cm project dir: $${PWD})
+#!build_pass:message(cm project dir: $${PWD})
 	
