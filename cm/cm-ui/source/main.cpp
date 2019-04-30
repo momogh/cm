@@ -14,6 +14,11 @@ int main(int argc, char *argv[])
     // Registriamo la classe "MasterController", definita dentro il progetto "cm-lib" sotto i namespaces "cm" e "controllers", all'interno di un nuovo modulo
     // chiamato "CM", di versione "1" e sottoversione "0". Faremo riferimento a questa classe con il nome di "MasterController"
     qmlRegisterType<cm::controllers::MasterController>("CM", 1, 0, "MasterController");
+
+    // Registriamo la classe "NavigationController", definita dentro il progetto "cm-lib" sotto i namespaces "cm" e "controllers", all'interno di un nuovo modulo
+    // chiamato "CM", di versione "1" e sottoversione "0". Faremo riferimento a questa classe con il nome di "NavigationController"
+    qmlRegisterType<cm::controllers::NavigationController>("CM", 1, 0, "NavigationController");
+
     cm::controllers::MasterController masterController;
 
     QQmlApplicationEngine engine;
