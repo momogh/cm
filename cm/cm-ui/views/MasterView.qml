@@ -22,57 +22,8 @@ Window {
     }
 
     // Navigation Bar (messa di lato a sinistra).
-    Rectangle {
+    NavigationBar {
         id: navigationBar
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            left: parent.left
-        }
-        width: 100
-        color: "#000000"
-
-        Column {
-            /*
-            Button {
-                text: "Dashboard"
-                onClicked:
-                masterController.ui_navigationController.goDashboardView()
-            }
-            Button {
-                text: "New Client"
-                onClicked:
-                masterController.ui_navigationController.goCreateClientView()
-            }
-            Button {
-                text: "Find Client"
-                onClicked:
-                masterController.ui_navigationController.goFindClientView()
-            }
-            */
-            NavigationButton {
-                iconCharacter: "\uf152"
-                description: ""
-            }
-
-            NavigationButton {
-                iconCharacter: "\uf015"
-                description: "Dashboard"
-            }
-
-            NavigationButton {
-                iconCharacter: "\uf234"
-                description: "New Client..."
-            }
-
-            NavigationButton {
-                iconCharacter: "\uf002"
-                description: "Find Client..."
-            }
-
-
-
-        }
     }
 
     // Area centrale dell'applicazione che carica pagine differenti.
