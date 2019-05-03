@@ -11,10 +11,12 @@ public:
         masterController(_masterController)
     {
         navigationController = new NavigationController(masterController);
+        commandController = new CommandController(masterController);
     }
 
     MasterController* masterController{nullptr};
     NavigationController* navigationController{nullptr};
+    CommandController* commandController{nullptr};
     QString welcomeMessage = "This is MasterController to Major Tom";
 };
 
@@ -38,6 +40,10 @@ NavigationController* MasterController::navigationController()
     return implementation->navigationController;
 }
 
+CommandController* MasterController::commandController()
+{
+    return implementation->commandController;
+}
 // Metodo che restituisce la stringa con il messaggio di benvenuto.
 const QString& MasterController::welcomeMessage() const
 {
