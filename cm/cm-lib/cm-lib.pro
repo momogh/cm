@@ -30,13 +30,25 @@ include(../qmake-destination-path.pri)
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += source/models/client.cpp \
+source/data/datetimedecorator.cpp \
+    source/data/entity.cpp \
+source/data/enumeratordecorator.cpp \
     source/controllers/command_controller.cpp \
     source/controllers/master-controller.cpp \
+    source/data/datadecorator.cpp \
+    source/data/intdecorator.cpp \
+    source/data/stringdecorator.cpp \
     source/framework/command.cpp
 
 HEADERS +=  source/cm-lib_global.h \
+source/data/datetimedecorator.h \
+    source/data/entity.h \
+source/data/enumeratordecorator.h \
     source/controllers/command_controller.h \
     source/controllers/navigation-controller.h \
+    source/data/datadecorator.h \
+    source/data/intdecorator.h \
+    source/data/stringdecorator.h \
     source/framework/command.h \
 source/models/client.h \
     source/controllers/master-controller.h
